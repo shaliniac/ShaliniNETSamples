@@ -1,0 +1,66 @@
+﻿@model IEnumerable<MVC4StudentsApplication.CourseTable>
+
+@{
+    ViewBag.Title = "Courses List";
+}
+
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title</h1>
+            </hgroup>            
+        </div>
+    </section>
+}
+
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CourseID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CourseTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CourseRoom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CourseDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CourseDuration)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CourseID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CourseTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CourseRoom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CourseDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CourseDuration)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id= item.CourseID}) |
+            @Html.ActionLink("Details", "Details", new {  id= item.CourseID}) |
+            @Html.ActionLink("Delete", "Delete", new { id= item.CourseID })
+        </td>
+    </tr>
+}
+
+</table>

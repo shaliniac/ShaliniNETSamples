@@ -1,0 +1,53 @@
+﻿@model IEnumerable<MVC4StudentsApplication.EnrolmentTable>
+
+@{
+    ViewBag.Title = "Enrolment List";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title</h1>
+            </hgroup>            
+        </div>
+    </section>
+}
+
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EnrolmentID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CourseTable.CourseTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StudentTable.StudentName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.EnrolmentID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CourseTable.CourseTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StudentTable.StudentName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {id= item.EnrolmentID}) |
+            @Html.ActionLink("Details", "Details", new { id= item.EnrolmentID }) |
+            @Html.ActionLink("Delete", "Delete", new { id= item.EnrolmentID})
+        </td>
+    </tr>
+}
+
+</table>

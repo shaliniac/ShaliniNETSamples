@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+
+
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+            </hgroup>            
+        </div>
+    </section>
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1> 
+</hgroup>
+
+<article>
+    <p>
+        We are a start up company with big amibition. This application is only a sample using MVC 4 framework managing a Courses/ Students Database.
+    </p>
+
+</article>
+
+<aside>
+    <h3>Site Map</h3>
+
+    <ul>
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("About", "About", "Home")</li>
+        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+        <li>@Html.ActionLink("Students", "Index", "Students")</li>
+        <li>@Html.ActionLink("Courses", "Index", "Courses")</li>
+        <li>@Html.ActionLink("Enrolment", "Index", "Enrolment")</li>
+    </ul>
+</aside>

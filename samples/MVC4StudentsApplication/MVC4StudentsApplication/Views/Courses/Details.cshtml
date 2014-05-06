@@ -1,0 +1,71 @@
+﻿@model MVC4StudentsApplication.CourseTable
+
+@{
+    ViewBag.Title = "Course Detail";
+}
+
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+            </hgroup>            
+        </div>
+    </section>
+}
+
+
+
+
+<fieldset>
+    <legend>CourseTable</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CourseTitle)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CourseTitle)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CourseRoom)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CourseRoom)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CourseDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CourseDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CourseDuration)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CourseDuration)
+    </div>
+
+     <div class="display-field">
+        <table>
+            <tr>
+                <th>Students Enrolled List</th>
+              
+            </tr>
+            @foreach (var item in Model.EnrolmentTables)
+            {
+                <tr>                    
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StudentTable.StudentName)
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

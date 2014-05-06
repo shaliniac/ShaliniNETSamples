@@ -1,0 +1,56 @@
+﻿@model MVC4StudentsApplication.StudentTable
+
+@{
+    ViewBag.Title = "Delete Student";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+            </hgroup>            
+        </div>
+    </section>
+}
+
+
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>StudentTable</legend>
+
+      <div class="display-label">
+         @Html.DisplayNameFor(model => model.StudentName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.StudentName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.StudentAddress)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.StudentAddress)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.StudentPhone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.StudentPhone)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.StudentEmail)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.StudentEmail)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

@@ -1,0 +1,54 @@
+﻿@model MVC4StudentsApplication.EnrolmentTable
+
+@{
+    ViewBag.Title = "Create Enrolment";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+            </hgroup>            
+        </div>
+    </section>
+}
+
+
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>EnrolmentTable</legend>
+       
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CourseID, "CourseTable")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("CourseID", String.Empty)
+            @Html.ValidationMessageFor(model => model.CourseID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.StudentID, "StudentTable")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("StudentID", String.Empty)
+            @Html.ValidationMessageFor(model => model.StudentID)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
