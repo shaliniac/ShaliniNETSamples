@@ -41,6 +41,7 @@ namespace MVC4StudentsApplication.Controllers
         public ActionResult Create()
         {
             return View(new StudentTable {StudentName = "Anita",StudentAddress= "48 Hello", StudentEmail = "t@y.com",StudentPhone="0156678" });
+            
 
         }
 

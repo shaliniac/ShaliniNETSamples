@@ -1,0 +1,59 @@
+﻿@model IEnumerable<RichieCreativeUniversity.ViewModel.EnrollmentDateGroup>
+@{
+    ViewBag.Title = "Student Enrolment Statistics";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+            </hgroup>            
+        </div>
+    </section>
+}
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+</hgroup>
+<table>
+    <tr>
+        <th>
+            Enrollment Date
+        </th>
+        <th>
+            Students
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.EnrollmentDate)
+        </td>
+        <td>
+            @item.StudentCount
+        </td>
+    </tr>
+}
+</table>
+
+<article>
+    <p>
+        Richie Creative Limited’s established professionals in the UK have over 10 years of experience and are capable of providing high quality, cost effective and value added software solutions around the Globe. 
+    </p>
+
+
+</article>
+
+<aside>
+    <h3>Site Map</h3>
+   
+    <ul>
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("About", "About", "Home")</li>
+        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+        <li>@Html.ActionLink("Students", "Index", "Student")</li>
+        <li>@Html.ActionLink("Courses", "Index", "Course")</li>
+        <li>@Html.ActionLink("Instructors", "Index", "Instructor")</li>
+        <li>@Html.ActionLink("Departments", "Index", "Department")</li>
+    </ul>
+</aside>

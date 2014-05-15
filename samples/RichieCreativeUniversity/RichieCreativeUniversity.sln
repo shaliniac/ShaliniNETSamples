@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RichieCreativeUniversity", "RichieCreativeUniversity\RichieCreativeUniversity.csproj", "{BAE9D92D-7AE7-4804-9AC1-8DAD4DCC3599}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RichieCreativeUniversity.Tests", "RichieCreativeUniversity.Tests\RichieCreativeUniversity.Tests.csproj", "{0A74C990-0F8A-4FED-9A52-BD8D59F43272}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BAE9D92D-7AE7-4804-9AC1-8DAD4DCC3599}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAE9D92D-7AE7-4804-9AC1-8DAD4DCC3599}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAE9D92D-7AE7-4804-9AC1-8DAD4DCC3599}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAE9D92D-7AE7-4804-9AC1-8DAD4DCC3599}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A74C990-0F8A-4FED-9A52-BD8D59F43272}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A74C990-0F8A-4FED-9A52-BD8D59F43272}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A74C990-0F8A-4FED-9A52-BD8D59F43272}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A74C990-0F8A-4FED-9A52-BD8D59F43272}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

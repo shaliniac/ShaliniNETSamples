@@ -1,0 +1,33 @@
+﻿@model RichieCreativeUniversity.Models.Enrollment
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Enrollment</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Course.Title)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Course.Title)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Student.LastName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Student.LastName)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

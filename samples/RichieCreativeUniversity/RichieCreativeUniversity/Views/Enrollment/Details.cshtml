@@ -1,0 +1,29 @@
+﻿@model RichieCreativeUniversity.Models.Enrollment
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Enrollment</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Course.Title)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Course.Title)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Student.LastName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Student.LastName)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.EnrollmentID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
